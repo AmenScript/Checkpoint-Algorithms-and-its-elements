@@ -1,0 +1,23 @@
+# Input
+sentence = "Hello world, how are you today."
+
+# Variables Declaration
+length_counter = 0
+word_counter = 0
+vowel_counter = 0
+
+vowels = "aeiouAEIOU"
+
+for i in range(len(sentence)):
+    char = sentence[i]
+    length_counter += 1
+    if char in vowels:
+        vowel_counter += 1
+    if char == ' ' and i < len(sentence) - 1 and sentence[i + 1] not in (' ', '.'):
+        word_counter += 1
+word_counter += 1
+
+# PP
+print("Length of the sentence (characters):", length_counter)
+print("Number of words:", word_counter)
+print("Number of vowels:", vowel_counter)
